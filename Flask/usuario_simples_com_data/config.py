@@ -1,10 +1,10 @@
-from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
+from flask import *
+from flask_sqlalchemy import *
 import os
 
 app = Flask(__name__)
-
 app.app_context().push()
+
 arquivo = os.path.join(os.path.dirname(os.path.abspath(__file__)), "teste.db")
 
 app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///"+ arquivo
